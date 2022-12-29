@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    
+    tools {nodejs 'node'}
+        
+    stages {        
+        stage('build'){    
+            steps{
+                git https://github.com/sj-1997/simple-node-js-react-npm-app.git
+                bat 'npm install'
+            }
+        }
+    }
+}
